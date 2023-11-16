@@ -3,6 +3,15 @@
 
 name: Node.js CI
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
   push:
